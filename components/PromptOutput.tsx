@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Icon } from './Icon';
 
@@ -22,13 +21,13 @@ export const PromptOutput: React.FC<PromptOutputProps> = ({ promptText, isLoadin
   };
 
   return (
-    <div className="bg-slate-800 border border-slate-700 p-6 rounded-lg h-full flex flex-col">
-      <h2 className="text-xl font-semibold text-slate-200 mb-4">Output Prompt</h2>
-      <div className="relative flex-grow">
-        <div className="w-full h-full p-4 bg-slate-900 rounded-md whitespace-pre-wrap text-slate-300 text-sm overflow-y-auto">
+    <div className="bg-slate-800 border border-slate-700 p-3 rounded-lg h-full flex flex-col">
+      <h2 className="text-base font-semibold text-slate-200 mb-2">Output Prompt</h2>
+      <div className="relative flex-grow min-h-0">
+        <div className="absolute inset-0 p-2 bg-slate-900 rounded-md whitespace-pre-wrap text-slate-300 text-xs overflow-y-auto">
           {isLoading ? (
             <div className="flex items-center justify-center h-full">
-              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-slate-300"></div>
+              <div className="animate-spin rounded-full h-10 w-10 border-b-2 border-slate-300"></div>
             </div>
           ) : (
             promptText || "กรุณากรอกข้อมูลและกด 'สร้าง Prompt' เพื่อดูผลลัพธ์ที่นี่"
@@ -38,7 +37,7 @@ export const PromptOutput: React.FC<PromptOutputProps> = ({ promptText, isLoadin
       <button
         onClick={handleCopy}
         disabled={!promptText || isLoading}
-        className={`mt-4 w-full flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-slate-800 transition-all duration-150 ${
+        className={`mt-3 w-full flex items-center justify-center px-3 py-1.5 border border-transparent text-sm font-medium rounded-md shadow-sm text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-slate-800 transition-all duration-150 ${
           copied 
             ? 'bg-green-600 hover:bg-green-700 focus:ring-green-500' 
             : 'bg-violet-600 hover:bg-violet-700 focus:ring-violet-500'
@@ -46,12 +45,12 @@ export const PromptOutput: React.FC<PromptOutputProps> = ({ promptText, isLoadin
       >
         {copied ? (
           <>
-            <CheckIcon className="w-5 h-5 mr-2" />
+            <CheckIcon className="w-4 h-4 mr-2" />
             คัดลอกแล้ว!
           </>
         ) : (
           <>
-            <ClipboardIcon className="w-5 h-5 mr-2" />
+            <ClipboardIcon className="w-4 h-4 mr-2" />
             คัดลอก Prompt
           </>
         )}

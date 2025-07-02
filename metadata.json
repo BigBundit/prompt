@@ -1,5 +1,6 @@
 {
   "name": "Scene Prompt Generator",
   "description": "An application to generate detailed prompts for video or image scenes through a comprehensive form. It helps creators specify every detail from lighting and location to character actions and camera angles, then generates a consolidated prompt.",
-  "requestFramePermissions": []
+  "requestFramePermissions": [],
+  "prompt": ""
 }
