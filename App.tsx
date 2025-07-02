@@ -69,7 +69,7 @@ const App: React.FC = () => {
   }, []);
 
   const generatePromptText = (data: SceneData): string => {
-    let prompt = `สร้าง Prompt ภาษาอังกฤษสำหรับสร้าง VDO ด้วย VEO3\n\n`;
+    let prompt = ``;
 
     const sections = [
       { title: "",
